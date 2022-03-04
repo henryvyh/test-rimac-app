@@ -1,0 +1,45 @@
+@import ../../assets/sass/colors.sass
+.header
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    padding: 1em 8%
+    min-height: 56px
+    position: sticky
+    top: 0
+    width: 100%
+    &__contact,
+    &__call
+        font-size: 14px
+        margin: 0 0 0 2em
+        color: $textLink
+        align-items: center
+        justify-content: center
+        display: flex
+        flex-direction: row
+        span
+            margin: 0 .5em 0 0
+    &__contact
+        >p
+            font-size: 12px
+            color: $textPrimary
+
+@media screen and ( min-width:769px)
+    .header
+        &__call
+            p:nth-child(3)
+                display: none
+@media screen and ( max-width:768px)
+    .header
+        padding: 1em 2em
+        &__contact
+            padding: .1em 0
+            >p
+                display: none
+        &__call
+            padding: .1em 0
+            p:nth-child(2)
+                display: none
+            p:nth-child(3)
+                display: inline-flex

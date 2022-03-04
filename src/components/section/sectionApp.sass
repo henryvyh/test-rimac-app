@@ -1,0 +1,99 @@
+@import ../../assets/sass/colors.sass
+
+.auth
+    display: grid
+    flex-grow: 1
+    grid-template-columns: 40% 60%
+    &__info
+        background-image: url(../../assets/images/maskHome.png)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: top
+        display: flex
+        flex-grow: 1
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 2em
+        &__subtitle
+            color: $textSecondary
+            line-height: 16px
+        &__title
+            font-size: 36px
+            padding: 0.3em 0
+            line-height: 48px
+            font-weight: normal
+            color: $textPrimary
+            span
+                color: $textRed
+        &__description
+            line-height: 24px
+            color: $textPrimary
+            font-size: 14px
+            font-weight: 400
+        &__img
+            display: flex
+            max-width: 320px
+            flex-grow: 0.5
+            align-items: flex-end
+            justify-content: flex-end
+            img
+                align-self: flex-end
+                height: 220px
+        &__text
+            flex-grow: 1
+            max-width: 320px
+    &__data
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding: 2em 10em
+        &__wrap
+            width: 288px
+            display: flex
+            flex-direction: column
+        &__title
+            font-size: 28px
+            line-height: 36px
+            color: $textSecondary
+        &__input
+            margin: .6em 0 !important
+    &__submit
+        width: 192px!important
+
+@media screen and ( max-width:768px)
+    .auth
+        grid-template-columns: 100%
+        grid-template-rows: auto 1fr
+        overflow: auto
+        &__footer
+            background: #fff
+            position: sticky
+            padding: 1em 0em
+            bottom: 0
+        &__submit
+            // position: sticky
+            width: 100%!important
+        &__data
+            padding: 2em
+            justify-content: flex-start
+            &__wrap
+                width: 100%
+        &__info
+            padding: 0
+            flex-direction: row-reverse
+            &__text
+                padding: 1em 0em 1em 2em
+            &__img
+                width: 200px
+                justify-content: flex-start
+                overflow: hidden
+                img
+                    height: 180px
+            &__subtitle
+                font-size: 10px
+            &__title
+                font-size: 28px
+        &__copy
+            display: none

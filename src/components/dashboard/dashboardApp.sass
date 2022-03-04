@@ -1,0 +1,152 @@
+@import ../../assets/sass/colors.sass
+.dashboard
+    display: grid
+    flex-grow: 1
+    grid-template-columns: 0.9fr 1.2fr 0.9fr
+    border-top: solid 1px #E4E8F7
+    overflow: hidden
+    >div
+        padding: 3em 2em 1em 2em
+    &__stepper
+        background: #F7F8FC
+    &__data
+        overflow: auto
+        &__title
+            font-size: 40px
+            margin: .2em 0
+            color: #494F66
+            line-height: 48px
+            &--view
+                display: none
+            span
+                color: $textRed
+        &__description
+            line-height: 28px
+            font-size: 16px
+            color: $textPrimary
+        &__subtitle
+            font-size: 20px
+            line-height: 28px
+            font-weight: normal
+            color: $textSecondary
+            margin: 1.5em 0
+    &__resume
+        padding: 6em 2em 2em 2em!important
+        ul
+            margin: 1em 0 2em 0
+            list-style-type: none
+            li
+                display: flex
+                flex-direction: row
+                font-size: 14px
+                color: $textPrimary
+                padding: 0.5em 0em
+                span
+                    color: #43B748
+                    margin: 0 .6em 0 0
+        h4
+            font-size: 16px
+            line-height: 24px
+            color: #494F66
+            margin: 1em 0
+        &__price
+            font-size: 28px
+            line-height: 36px
+            margin: .1em 0
+            color: $textSecondary
+        &__title
+            text-transform: uppercase
+            font-size: 12px
+            color: $textSecondary
+        &__subtitle
+            font-size: 12px
+            color: $textPrimary
+    &__divider
+        margin: 2em 0!important
+    &__submit
+        width: 224px!important
+    &__count
+        display: flex
+        padding: 2em 0 2.5em 0
+        flex-direction: row
+        &__body
+            padding: 0 1em 0 0
+            flex-grow: 1
+            h2
+                font-size: 16px
+                line-height: 24px
+                color: #494F66
+            p
+                font-size: 12px
+                line-height: 16px
+                text-transform: uppercase
+                color: #676F8F
+        &__action
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: center
+            border: 1px solid #C5CBE0
+            box-sizing: border-box
+            border-radius: 8px
+            padding: 0.6em 0.1em
+            white-space: nowrap
+            h3
+                color: #494F66
+                padding: 0 .2em
+                font-size: 16px
+            button
+                span
+                    color: #6F7DFF
+
+@media screen and ( max-width:768px)
+    .dashboard
+        grid-template-columns: 100%
+        grid-template-rows: auto 1fr
+        overflow: auto
+        >div
+            padding: 1em 2em
+            &:nth-child(2)
+                padding-top: 0em
+        &__maskMobile
+            padding: 1em 2em
+            background: #F7F8FC
+        &__prev
+            display: none!important
+        &__data
+            overflow: initial
+            padding: 0!important
+            &__title
+                display: none
+                font-size: 28px
+                &--view
+                    display: block
+        &__maskPadding
+            padding: 1em 2em
+        &__resume
+            position: sticky
+            bottom: 0
+            background: #fff
+            display: flex
+            padding: 1em 2em!important
+            flex-direction: row
+            &__wrap
+                flex-grow: 1
+            ul,h4,
+            &__title
+                display: none
+            &__subtitle
+                text-transform: uppercase
+        &__divider
+            display: none
+        &__submit
+            width: 168px!important
+        &__count
+            flex-direction: column
+            &__body
+                margin: 0 0 1.5em 0
+            &__action
+                padding: 0.6em 1em
+                h3
+                    flex-grow: 1
+                    text-align: center

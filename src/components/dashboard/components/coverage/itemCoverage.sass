@@ -1,0 +1,56 @@
+@import ../../../../assets/sass/colors.sass
+.itemCoverage
+    padding: .8em 0 .6em 0 !important
+    &__title
+        flex-grow: 1
+        padding: 0 0 0 1em
+        h2
+            color: #494F66
+            font-size: 20px
+            line-height: 28px
+            font-weight: normal
+    &__img
+        height: 50px
+        width: 50px
+    &__detail
+        padding: 1em 4em 1em 5em
+        p
+            font-size: 14px
+            color: $textPrimary
+            line-height: 24px
+            text-align: justify
+    &__collapse
+        color: $textRed
+        font-size: 22px
+    &__action
+        padding: 0 0 1em 4.5em
+
+@media screen and ( min-width:769px)
+    .itemCoverage
+        &__action
+            &__descktop
+                color: #6F7DFF!important
+            &__switch,
+            &--bottom
+                display: none !important
+
+@media screen and ( max-width:768px)
+    .itemCoverage
+        padding: 0.6em 0 0.0em 0 !important
+        &__collapseButton
+            display: none !important
+        &__action
+            &--btn
+                display: none
+            &--bottom
+                span
+                    color: #1976d2
+        &__collapse
+            &--mobile
+                color: #6F7DFF!important
+            &--disabled
+                color: #A3ABCC !important
+                span
+                    color: #A3ABCC !important
+        &__detail
+            padding: 1em 2em 1em 5em

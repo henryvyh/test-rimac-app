@@ -1,0 +1,33 @@
+@import ../../../../assets/sass/colors.sass
+.carCard
+    border: 3px solid #F0F2FA
+    margin: 2em 0 0em 0
+    display: flex
+    flex-direction: row
+    position: relative
+    align-items: center
+    justify-content: flex-start
+    height: 172px
+    padding: 2em 100px 2em 2em
+    border-radius: 12px
+    &__data
+        h3
+            font-size: 12px
+            line-height: 20px
+            letter-spacing: 0.2px
+            color: #A3ABCC
+        h2
+            color: $textSecondary
+            font-size: 20px
+            line-height: 28px
+    &__icon
+        height: 180px
+        position: absolute
+        right: 20px
+        bottom: 0
+
+@media screen and ( max-width:768px)
+    .carCard
+        height: 146px
+        background: #fff
+        margin-bottom: 2em
