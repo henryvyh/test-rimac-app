@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm i`
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -13,6 +15,19 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+## Users for test:
+
+Users for test:
+
+doc: 76056590
+placa: ACB-322
+
+doc: 76056591
+placa: AXT-322
+
+doc: 76056592
+placa: AXT-322
 
 ### `npm test`
 
